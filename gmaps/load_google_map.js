@@ -30,7 +30,7 @@ function fillMap(colors) {
 
   if (townRoutes.length) {
     mapTownsWithColors(townRoutes, colors);
-  } else if (routesByDeliveryAdress.length) {
+  } else if (deliveryAddresses.length) {
     mapDeliveries(deliveryAddresses);
   };
 };
