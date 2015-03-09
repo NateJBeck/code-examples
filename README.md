@@ -18,3 +18,5 @@ images) to objects. Image file storage done with Dropbox SDK.
 Based on Gmaps Javascript V3 documentation, refactored to allow for mapping of 
 towns (say, if an admin wanted to see a map of towns where they were currently 
 operating in) and of specific delivery addresses in each town. 
+
+Styled using bourbon/neat, a SASS grid design gem from thoughtbot.

@@ -1,0 +1,10 @@
+#map_wrapper {
+  @include span-columns(10);
+  @include shift(1);
+  height: 500px;
+}
+
+#map_canvas {
+  height: 100%;
+  border: 2px solid black;
+}
