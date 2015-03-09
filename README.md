@@ -11,3 +11,10 @@ A railsy controller and model. The controller uses `before_actions` to ensure
 only admins have access to CREATE, UPDATE and DELETE actions. The model
 incorporates Paperclip gem validations to attach files (in this case restricted to just
 images) to objects. Image file storage done with Dropbox SDK.
+
+
+####Gmaps
+
+Based on Gmaps Javascript V3 documentation, refactored to allow for mapping of 
+towns (say, if an admin wanted to see a map of towns where they were currently 
+operating in) and of specific delivery addresses in each town. 
