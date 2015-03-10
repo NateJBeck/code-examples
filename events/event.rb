@@ -1,7 +1,7 @@
 class Event < ActiveRecord::Base
   validates :date, presence: true
   validates :title, presence: true
-  validates :end_time, presence: true
+  validates :start_time, presence: true
 
   has_attached_file :main_photo,
                     styles: {

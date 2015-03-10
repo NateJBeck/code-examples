@@ -4,7 +4,7 @@ class EventsController < ApplicationController
 
   def index
     @event = Event.new
-    @events = Event.all
+    @events = formatted_event_json_for_calendar
 
     respond_to do |format|
       format.json { render json: @events }
@@ -42,6 +42,17 @@ class EventsController < ApplicationController
 
   private
 
+  def formatted_event_json_for_calendar
+    Event.all.map do |event| 
+      {
+        id: event.id,
+        title: event.title,
+        start: "#{ event.date }T#{ event.start_time.to_s.split(" ")[1] }",
+        allDay: false
+      }
+    end
+  end
+
   def check_admin_status
     unless current_user.is_admin?
       redirect_to root_path
@@ -58,6 +69,7 @@ class EventsController < ApplicationController
       permit(
         :date,
         :title,
+        :start_time,
         :main_photo
       )
   end
