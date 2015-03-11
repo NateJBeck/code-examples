@@ -7,10 +7,11 @@ with explanations, either for review or for my ease of access.
 
 ####Events
 
-A railsy controller and model. The controller uses `before_actions` to ensure
+From an admin event panel. The controller uses `before_actions` to ensure
 only admins have access to CREATE, UPDATE and DELETE actions. The model
-incorporates Paperclip gem validations to attach files (in this case restricted to just
-images) to objects. Image file storage done with Dropbox SDK.
+incorporates Paperclip size and content validations for attached event photos,
+with storage via Dropbox SDK. Uses FullCalendar (calendar.js) to display events
+with details on click.
 
 
 ####Gmaps

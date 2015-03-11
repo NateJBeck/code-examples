@@ -4,10 +4,10 @@ class EventsController < ApplicationController
 
   def index
     @event = Event.new
-    @events = formatted_event_json_for_calendar
+    @events = Event.all 
 
     respond_to do |format|
-      format.json { render json: @events }
+      format.json { render json: formatted_event_json_for_calendar }
       format.html
     end
   end
